@@ -14,6 +14,7 @@ class LoginCorrect(unittest.TestCase):
         user ="admin"
         pwd= "root1234"
         driver.get("http://"+config('IP_ADDRESS')+":"+config('CONTENT_TOOLS_PORT')+"/login")
+        print (driver.current_url)
         elem = driver.find_element_by_id("id_username")
         elem.send_keys(user)
         elem = driver.find_element_by_id("id_password")
